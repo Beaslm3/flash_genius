@@ -1,0 +1,310 @@
+FlashGenius Website - Complete Project Files
+
+SETUP INSTRUCTIONS:
+===================
+
+1. Create a new folder called "flashgenius-website"
+2. Extract these files maintaining the folder structure shown below
+3. Open terminal in the project folder and run: npm install
+4. Test locally with: npm start
+5. Deploy to Vercel by connecting your GitHub repository
+
+FOLDER STRUCTURE:
+================
+
+flashgenius-website/
+├── package.json
+├── tailwind.config.js  
+├── vercel.json
+├── README.md
+├── INSTRUCTIONS.txt
+├── public/
+│   └── index.html
+└── src/
+    ├── index.js
+    ├── App.js
+    ├── components/
+    │   └── Layout.js
+    └── pages/
+        ├── Home.js
+        └── Dashboard.js
+
+FILES CONTENT:
+==============
+
+
+--- FILE: package.json ---
+{
+  "name": "flashgenius-final-build",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "lucide-react": "^0.263.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead"],
+    "development": ["last 1 chrome version"]
+  }
+}
+
+
+--- FILE: tailwind.config.js ---
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+
+--- FILE: vercel.json ---
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+
+
+--- FILE: public/index.html ---
+<!DOCTYPE html>
+<html data-filename="pages/CodeExporter" data-linenumber="68" data-visual-selector-id="pages/CodeExporter68" lang="en">
+<head data-filename="pages/CodeExporter" data-linenumber="69" data-visual-selector-id="pages/CodeExporter69">
+  <meta data-filename="pages/CodeExporter" data-linenumber="70" data-visual-selector-id="pages/CodeExporter70" charset="utf-8" />
+  <meta data-filename="pages/CodeExporter" data-linenumber="71" data-visual-selector-id="pages/CodeExporter71" name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-filename="pages/CodeExporter" data-linenumber="72" data-visual-selector-id="pages/CodeExporter72">FlashGenius Website</title>
+  <script data-filename="pages/CodeExporter" data-linenumber="73" data-visual-selector-id="pages/CodeExporter73" src="https://cdn.tailwindcss.com"></script>
+</head>
+<body data-filename="pages/CodeExporter" data-linenumber="75" data-visual-selector-id="pages/CodeExporter75"><noscript data-filename="pages/CodeExporter" data-linenumber="75" data-visual-selector-id="pages/CodeExporter75">You need to enable JavaScript to run this app.</noscript><div data-filename="pages/CodeExporter" data-linenumber="75" data-visual-selector-id="pages/CodeExporter75" id="root"></div></body>
+</html>
+
+
+--- FILE: src/index.js ---
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App data-filename="pages/CodeExporter" data-linenumber="84" data-visual-selector-id="pages/CodeExporter84" />
+  </React.StrictMode>
+);
+
+
+--- FILE: src/App.js ---
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+
+export default function App() {
+  return (
+    <BrowserRouter data-filename="pages/CodeExporter" data-linenumber="95" data-visual-selector-id="pages/CodeExporter95">
+      <Layout data-filename="pages/CodeExporter" data-linenumber="96" data-visual-selector-id="pages/CodeExporter96">
+        <Routes data-filename="pages/CodeExporter" data-linenumber="97" data-visual-selector-id="pages/CodeExporter97">
+          <Route data-filename="pages/CodeExporter" data-linenumber="98" data-visual-selector-id="pages/CodeExporter98" path="/" element={<Navigate data-filename='pages/CodeExporter' data-linenumber='98' data-visual-selector-id='pages/CodeExporter98' to="/home" replace />} />
+          <Route data-filename="pages/CodeExporter" data-linenumber="99" data-visual-selector-id="pages/CodeExporter99" path="/home" element={<Home data-filename='pages/CodeExporter' data-linenumber='99' data-visual-selector-id='pages/CodeExporter99' />} />
+          <Route data-filename="pages/CodeExporter" data-linenumber="100" data-visual-selector-id="pages/CodeExporter100" path="/dashboard" element={<Dashboard data-filename='pages/CodeExporter' data-linenumber='100' data-visual-selector-id='pages/CodeExporter100' />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
+}
+
+
+--- FILE: src/components/Layout.js ---
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Home as HomeIcon, Library, Sparkles } from 'lucide-react';
+
+export default function Layout({ children }) {
+  const location = useLocation();
+  const navigationItems = [
+    { title: 'Home', url: '/home', icon: HomeIcon },
+    { title: 'Dashboard', url: '/dashboard', icon: Library },
+  ];
+
+  const mainContent = <main data-filename="pages/CodeExporter" data-linenumber="117" data-visual-selector-id="pages/CodeExporter117" className="flex-1 overflow-auto">{children}</main>;
+
+  // Do not show sidebar on the Home page for a landing page experience
+  if (location.pathname === '/home') {
+    return mainContent;
+  }
+
+  return (
+    <div data-filename="pages/CodeExporter" data-linenumber="125" data-visual-selector-id="pages/CodeExporter125" className="min-h-screen flex bg-slate-50">
+      <aside data-filename="pages/CodeExporter" data-linenumber="126" data-visual-selector-id="pages/CodeExporter126" className="w-64 bg-slate-900 text-white flex-col hidden sm:flex">
+        <div data-filename="pages/CodeExporter" data-linenumber="127" data-visual-selector-id="pages/CodeExporter127" className="p-6 flex items-center gap-3 border-b border-slate-700">
+          <div data-filename="pages/CodeExporter" data-linenumber="128" data-visual-selector-id="pages/CodeExporter128" className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <Sparkles data-filename="pages/CodeExporter" data-linenumber="129" data-visual-selector-id="pages/CodeExporter129" className="w-6 h-6" />
+          </div>
+          <h1 className="font-bold text-xl">FlashGenius</h1>
+        </div>
+        <nav data-filename="pages/CodeExporter" data-linenumber="133" data-visual-selector-id="pages/CodeExporter133" className="p-4">
+          <ul data-filename="pages/CodeExporter" data-linenumber="134" data-visual-selector-id="pages/CodeExporter134">
+            {navigationItems.map((item) => (
+              <li data-filename="pages/CodeExporter" data-linenumber="136" data-visual-selector-id="pages/CodeExporter136" key={item.title}>
+                <Link
+                  to={item.url}
+                  className={"flex items-center gap-3 px-4 py-3 rounded-lg transition-colors " +
+                    (location.pathname === item.url
+                      ? 'bg-amber-500 text-white'
+                      : 'text-slate-300 hover:bg-slate-700 hover:text-white')
+                  }
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span data-filename="pages/CodeExporter" data-linenumber="146" data-visual-selector-id="pages/CodeExporter146">{item.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+      {mainContent}
+    </div>
+  );
+}
+
+
+--- FILE: src/pages/Home.js ---
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { BookOpen } from 'lucide-react';
+
+export default function Home() {
+  return (
+    <div
+      className="min-h-screen text-white"
+      style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}
+    >
+      <div data-filename="pages/CodeExporter" data-linenumber="167" data-visual-selector-id="pages/CodeExporter167" className="relative max-w-7xl mx-auto px-6 py-20 md:py-32 text-center">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          Master Any Subject with AI
+        </h1>
+        <p data-filename="pages/CodeExporter" data-linenumber="171" data-visual-selector-id="pages/CodeExporter171" className="text-xl md:text-2xl text-blue-100 mb-10 max-w-4xl mx-auto font-light">
+          Create intelligent flashcards, study smarter, and export professional study materials. Perfect for students, educators, and lifelong learners.
+        </p>
+        <div data-filename="pages/CodeExporter" data-linenumber="174" data-visual-selector-id="pages/CodeExporter174" className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <Link
+            to="/dashboard"
+            className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-lg transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg rounded-lg flex items-center gap-3"
+          >
+            <BookOpen data-filename="pages/CodeExporter" data-linenumber="179" data-visual-selector-id="pages/CodeExporter179" className="w-6 h-6" />
+            Go to Dashboard
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+--- FILE: src/pages/Dashboard.js ---
+import React from 'react';
+
+const sampleSets = [
+  { id: 1, title: 'Biology Basics', subject: 'Biology', difficulty: 'Beginner' },
+  { id: 2, title: 'World War II', subject: 'History', difficulty: 'Intermediate' },
+  { id: 3, title: 'Calculus Fundamentals', subject: 'Mathematics', difficulty: 'Advanced' },
+  { id: 4, title: 'Intro to Python', subject: 'Programming', difficulty: 'Beginner' },
+];
+
+export default function Dashboard() {
+  return (
+    <div data-filename="pages/CodeExporter" data-linenumber="198" data-visual-selector-id="pages/CodeExporter198" className="p-8">
+      <h1 className="text-3xl font-bold text-slate-900 mb-8">Your Flashcard Sets</h1>
+      <div data-filename="pages/CodeExporter" data-linenumber="200" data-visual-selector-id="pages/CodeExporter200" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sampleSets.map((set) => (
+          <div data-filename="pages/CodeExporter" data-linenumber="202" data-visual-selector-id="pages/CodeExporter202" key={set.id} className="bg-white border rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div data-filename="pages/CodeExporter" data-linenumber="203" data-visual-selector-id="pages/CodeExporter203" className="flex justify-between items-start mb-2">
+              <h2 className="text-xl font-bold text-slate-800">{set.title}</h2>
+              <span data-filename="pages/CodeExporter" data-linenumber="205" data-visual-selector-id="pages/CodeExporter205" className="text-xs font-semibold bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                {set.difficulty}
+              </span>
+            </div>
+            <p data-filename="pages/CodeExporter" data-linenumber="209" data-visual-selector-id="pages/CodeExporter209" className="text-slate-600 mb-4">{set.subject}</p>
+            <button data-filename="pages/CodeExporter" data-linenumber="210" data-visual-selector-id="pages/CodeExporter210" className="w-full bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-700 transition-colors">
+              Study Now
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+--- FILE: README.md ---
+# FlashGenius Website
+
+## Setup Instructions
+
+1. Create a new folder for your project
+2. Copy all the files from the code exporter into the correct folder structure
+3. Run the following commands:
+
+```bash
+npm install
+npm start
+```
+
+## Deployment to Vercel
+
+1. Push your code to GitHub
+2. Connect your GitHub repository to Vercel
+3. Deploy with these settings:
+   - Framework: Create React App
+   - Build Command: npm run build
+   - Output Directory: build
+
+Your website will be live!
+
+
+--- FILE: INSTRUCTIONS.txt ---
+FlashGenius Website Setup Instructions
+
+STEP 1: Create Project Structure
+Create a new folder called "flashgenius-website" on your computer.
+Inside this folder, create the following structure:
+
+flashgenius-website/
+├── public/
+├── src/
+│   ├── components/
+│   └── pages/
+├── package.json
+├── tailwind.config.js
+├── vercel.json
+└── README.md
+
+STEP 2: Copy Files
+Use the "Copy" button next to each file in the Code Exporter and paste the content into the corresponding files.
+
+STEP 3: Install Dependencies
+Open terminal in your project folder and run:
+npm install
+
+STEP 4: Test Locally
+Run: npm start
+Your website should open at http://localhost:3000
+
+STEP 5: Deploy to Vercel
+1. Push your code to GitHub
+2. Go to vercel.com and connect your GitHub repository
+3. Deploy with these settings:
+   - Framework Preset: Create React App
+   - Build Command: npm run build
+   - Output Directory: build
+
+That's it! Your website will be live.
