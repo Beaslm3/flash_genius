@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html data-filename="pages/CodeExporter" data-linenumber="9" data-visual-selector-id="pages/CodeExporter9" lang="en">
+<head data-filename="pages/CodeExporter" data-linenumber="10" data-visual-selector-id="pages/CodeExporter10">
+    <meta data-filename="pages/CodeExporter" data-linenumber="11" data-visual-selector-id="pages/CodeExporter11" charset="UTF-8">
+    <meta data-filename="pages/CodeExporter" data-linenumber="12" data-visual-selector-id="pages/CodeExporter12" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-filename="pages/CodeExporter" data-linenumber="13" data-visual-selector-id="pages/CodeExporter13">FlashGenius - AI Study Cards</title>
+    <script data-filename="pages/CodeExporter" data-linenumber="14" data-visual-selector-id="pages/CodeExporter14" src="https://cdn.tailwindcss.com"></script>
+    <style data-filename="pages/CodeExporter" data-linenumber="15" data-visual-selector-id="pages/CodeExporter15">
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gold-gradient { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+        .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .fade-in { animation: fadeIn 0.6s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .section { padding: 4rem 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    </style>
+</head>
+<body data-filename="pages/CodeExporter" data-linenumber="26" data-visual-selector-id="pages/CodeExporter26">
+    <!-- Navigation -->
+    <nav data-filename="pages/CodeExporter" data-linenumber="28" data-visual-selector-id="pages/CodeExporter28" class="gradient-bg text-white shadow-lg fixed w-full z-50">
+        <div data-filename="pages/CodeExporter" data-linenumber="29" data-visual-selector-id="pages/CodeExporter29" class="container">
+            <div data-filename="pages/CodeExporter" data-linenumber="30" data-visual-selector-id="pages/CodeExporter30" class="flex justify-between items-center py-4">
+                <div data-filename="pages/CodeExporter" data-linenumber="31" data-visual-selector-id="pages/CodeExporter31" class="flex items-center space-x-3">
+                    <div data-filename="pages/CodeExporter" data-linenumber="32" data-visual-selector-id="pages/CodeExporter32" class="w-10 h-10 gold-gradient rounded-xl flex items-center justify-center">
+                        <span data-filename="pages/CodeExporter" data-linenumber="33" data-visual-selector-id="pages/CodeExporter33" class="text-white font-bold text-lg">F</span>
+                    </div>
+                    <h1 class="text-2xl font-bold">FlashGenius</h1>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="37" data-visual-selector-id="pages/CodeExporter37" class="hidden md:flex space-x-8">
+                    <a data-filename="pages/CodeExporter" data-linenumber="38" data-visual-selector-id="pages/CodeExporter38" href="#home" class="hover:text-yellow-300 transition-colors">Home</a>
+                    <a data-filename="pages/CodeExporter" data-linenumber="39" data-visual-selector-id="pages/CodeExporter39" href="#features" class="hover:text-yellow-300 transition-colors">Features</a>
+                    <a data-filename="pages/CodeExporter" data-linenumber="40" data-visual-selector-id="pages/CodeExporter40" href="#pricing" class="hover:text-yellow-300 transition-colors">Pricing</a>
+                    <a data-filename="pages/CodeExporter" data-linenumber="41" data-visual-selector-id="pages/CodeExporter41" href="#contact" class="hover:text-yellow-300 transition-colors">Contact</a>
+                </div>
+                <button data-filename="pages/CodeExporter" data-linenumber="43" data-visual-selector-id="pages/CodeExporter43" class="md:hidden text-white">
+                    <svg data-filename="pages/CodeExporter" data-linenumber="44" data-visual-selector-id="pages/CodeExporter44" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path data-filename="pages/CodeExporter" data-linenumber="45" data-visual-selector-id="pages/CodeExporter45" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section data-filename="pages/CodeExporter" data-linenumber="53" data-visual-selector-id="pages/CodeExporter53" id="home" class="gradient-bg text-white section" style="padding-top: 8rem;">
+        <div data-filename="pages/CodeExporter" data-linenumber="54" data-visual-selector-id="pages/CodeExporter54" class="container text-center">
+            <div data-filename="pages/CodeExporter" data-linenumber="55" data-visual-selector-id="pages/CodeExporter55" class="fade-in">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6">Master Any Subject with AI</h2>
+                <p data-filename="pages/CodeExporter" data-linenumber="57" data-visual-selector-id="pages/CodeExporter57" class="text-xl md:text-2xl mb-10 max-w-4xl mx-auto opacity-90">
+                    Create intelligent flashcards in any language, study smarter with AI-powered tools, 
+                    and export professional study materials. Perfect for students, educators, and lifelong learners.
+                </p>
+                <div data-filename="pages/CodeExporter" data-linenumber="61" data-visual-selector-id="pages/CodeExporter61" class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                    <button data-filename="pages/CodeExporter" data-linenumber="62" data-visual-selector-id="pages/CodeExporter62" class="gold-gradient px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-all transform hover:scale-105 shadow-lg">
+                        Start Creating Free
+                    </button>
+                    <button data-filename="pages/CodeExporter" data-linenumber="65" data-visual-selector-id="pages/CodeExporter65" class="border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-all">
+                        View Demo
+                    </button>
+                </div>
+                
+                <!-- Stats -->
+                <div data-filename="pages/CodeExporter" data-linenumber="71" data-visual-selector-id="pages/CodeExporter71" class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div data-filename="pages/CodeExporter" data-linenumber="72" data-visual-selector-id="pages/CodeExporter72" class="text-center">
+                        <div data-filename="pages/CodeExporter" data-linenumber="73" data-visual-selector-id="pages/CodeExporter73" class="text-3xl md:text-4xl font-bold mb-2">1000+</div>
+                        <div data-filename="pages/CodeExporter" data-linenumber="74" data-visual-selector-id="pages/CodeExporter74" class="text-sm md:text-base opacity-80">Flashcard Sets Created</div>
+                    </div>
+                    <div data-filename="pages/CodeExporter" data-linenumber="76" data-visual-selector-id="pages/CodeExporter76" class="text-center">
+                        <div data-filename="pages/CodeExporter" data-linenumber="77" data-visual-selector-id="pages/CodeExporter77" class="text-3xl md:text-4xl font-bold mb-2">50+</div>
+                        <div data-filename="pages/CodeExporter" data-linenumber="78" data-visual-selector-id="pages/CodeExporter78" class="text-sm md:text-base opacity-80">Languages Supported</div>
+                    </div>
+                    <div data-filename="pages/CodeExporter" data-linenumber="80" data-visual-selector-id="pages/CodeExporter80" class="text-center">
+                        <div data-filename="pages/CodeExporter" data-linenumber="81" data-visual-selector-id="pages/CodeExporter81" class="text-3xl md:text-4xl font-bold mb-2">10,000+</div>
+                        <div data-filename="pages/CodeExporter" data-linenumber="82" data-visual-selector-id="pages/CodeExporter82" class="text-sm md:text-base opacity-80">Questions Generated</div>
+                    </div>
+                    <div data-filename="pages/CodeExporter" data-linenumber="84" data-visual-selector-id="pages/CodeExporter84" class="text-center">
+                        <div data-filename="pages/CodeExporter" data-linenumber="85" data-visual-selector-id="pages/CodeExporter85" class="text-3xl md:text-4xl font-bold mb-2">95%</div>
+                        <div data-filename="pages/CodeExporter" data-linenumber="86" data-visual-selector-id="pages/CodeExporter86" class="text-sm md:text-base opacity-80">User Success Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section data-filename="pages/CodeExporter" data-linenumber="94" data-visual-selector-id="pages/CodeExporter94" id="features" class="bg-white section">
+        <div data-filename="pages/CodeExporter" data-linenumber="95" data-visual-selector-id="pages/CodeExporter95" class="container">
+            <div data-filename="pages/CodeExporter" data-linenumber="96" data-visual-selector-id="pages/CodeExporter96" class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Everything You Need to Learn</h3>
+                <p data-filename="pages/CodeExporter" data-linenumber="98" data-visual-selector-id="pages/CodeExporter98" class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Powerful AI tools and study features designed to help you master any subject faster and more effectively.
+                </p>
+            </div>
+            <div data-filename="pages/CodeExporter" data-linenumber="102" data-visual-selector-id="pages/CodeExporter102" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div data-filename="pages/CodeExporter" data-linenumber="103" data-visual-selector-id="pages/CodeExporter103" class="card bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div data-filename="pages/CodeExporter" data-linenumber="104" data-visual-selector-id="pages/CodeExporter104" class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span data-filename="pages/CodeExporter" data-linenumber="105" data-visual-selector-id="pages/CodeExporter105" class="text-white text-2xl">✨</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">AI-Powered Generation</h4>
+                    <p data-filename="pages/CodeExporter" data-linenumber="108" data-visual-selector-id="pages/CodeExporter108" class="text-gray-600">Create flashcards instantly using AI from any topic or uploaded document in 50+ languages.</p>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="110" data-visual-selector-id="pages/CodeExporter110" class="card bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div data-filename="pages/CodeExporter" data-linenumber="111" data-visual-selector-id="pages/CodeExporter111" class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span data-filename="pages/CodeExporter" data-linenumber="112" data-visual-selector-id="pages/CodeExporter112" class="text-white text-2xl">🧠</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Smart Study Mode</h4>
+                    <p data-filename="pages/CodeExporter" data-linenumber="115" data-visual-selector-id="pages/CodeExporter115" class="text-gray-600">Interactive study sessions with progress tracking and performance analytics.</p>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="117" data-visual-selector-id="pages/CodeExporter117" class="card bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div data-filename="pages/CodeExporter" data-linenumber="118" data-visual-selector-id="pages/CodeExporter118" class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span data-filename="pages/CodeExporter" data-linenumber="119" data-visual-selector-id="pages/CodeExporter119" class="text-white text-2xl">📋</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Comprehensive Testing</h4>
+                    <p data-filename="pages/CodeExporter" data-linenumber="122" data-visual-selector-id="pages/CodeExporter122" class="text-gray-600">Take tests with multiple formats: text input, voice recognition, and multiple choice.</p>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="124" data-visual-selector-id="pages/CodeExporter124" class="card bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div data-filename="pages/CodeExporter" data-linenumber="125" data-visual-selector-id="pages/CodeExporter125" class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span data-filename="pages/CodeExporter" data-linenumber="126" data-visual-selector-id="pages/CodeExporter126" class="text-white text-2xl">📚</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Export to Books</h4>
+                    <p data-filename="pages/CodeExporter" data-linenumber="129" data-visual-selector-id="pages/CodeExporter129" class="text-gray-600">Turn your flashcards into professional books ready for Amazon KDP publishing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section data-filename="pages/CodeExporter" data-linenumber="136" data-visual-selector-id="pages/CodeExporter136" class="bg-gray-50 section">
+        <div data-filename="pages/CodeExporter" data-linenumber="137" data-visual-selector-id="pages/CodeExporter137" class="container">
+            <div data-filename="pages/CodeExporter" data-linenumber="138" data-visual-selector-id="pages/CodeExporter138" class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">How FlashGenius Works</h3>
+                <p data-filename="pages/CodeExporter" data-linenumber="140" data-visual-selector-id="pages/CodeExporter140" class="text-xl text-gray-600 max-w-3xl mx-auto">Get started in minutes with our simple three-step process.</p>
+            </div>
+            <div data-filename="pages/CodeExporter" data-linenumber="142" data-visual-selector-id="pages/CodeExporter142" class="grid md:grid-cols-3 gap-12">
+                <div data-filename="pages/CodeExporter" data-linenumber="143" data-visual-selector-id="pages/CodeExporter143" class="text-center">
+                    <div data-filename="pages/CodeExporter" data-linenumber="144" data-visual-selector-id="pages/CodeExporter144" class="w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span data-filename="pages/CodeExporter" data-linenumber="145" data-visual-selector-id="pages/CodeExporter145" class="text-white text-3xl font-bold">1</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Create</h4>
+                    <p data-filename="pages/CodeExporter" data-linenumber="148" data-visual-selector-id="pages/CodeExporter148" class="text-gray-600 leading-relaxed">Generate flashcards using AI from any topic, or upload documents to extract key information automatically.</p>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="150" data-visual-selector-id="pages/CodeExporter150" class="text-center">
+                    <div data-filename="pages/CodeExporter" data-linenumber="151" data-visual-selector-id="pages/CodeExporter151" class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span data-filename="pages/CodeExporter" data-linenumber="152" data-visual-selector-id="pages/CodeExporter152" class="text-white text-3xl font-bold">2</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Study</h4>
+                    <p data-filename="pages/CodeExporter" data-linenumber="155" data-visual-selector-id="pages/CodeExporter155" class="text-gray-600 leading-relaxed">Use our interactive study mode with progress tracking to review and master your flashcards effectively.</p>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="157" data-visual-selector-id="pages/CodeExporter157" class="text-center">
+                    <div data-filename="pages/CodeExporter" data-linenumber="158" data-visual-selector-id="pages/CodeExporter158" class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span data-filename="pages/CodeExporter" data-linenumber="159" data-visual-selector-id="pages/CodeExporter159" class="text-white text-3xl font-bold">3</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Test & Export</h4>
+                    <p data-filename="pages/CodeExporter" data-linenumber="162" data-visual-selector-id="pages/CodeExporter162" class="text-gray-600 leading-relaxed">Take comprehensive tests to evaluate your knowledge and export your materials as professional books.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section data-filename="pages/CodeExporter" data-linenumber="169" data-visual-selector-id="pages/CodeExporter169" id="pricing" class="bg-white section">
+        <div data-filename="pages/CodeExporter" data-linenumber="170" data-visual-selector-id="pages/CodeExporter170" class="container">
+            <div data-filename="pages/CodeExporter" data-linenumber="171" data-visual-selector-id="pages/CodeExporter171" class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Choose Your Plan</h3>
+                <p data-filename="pages/CodeExporter" data-linenumber="173" data-visual-selector-id="pages/CodeExporter173" class="text-xl text-gray-600">Start free and upgrade as you grow</p>
+            </div>
+            <div data-filename="pages/CodeExporter" data-linenumber="175" data-visual-selector-id="pages/CodeExporter175" class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div data-filename="pages/CodeExporter" data-linenumber="176" data-visual-selector-id="pages/CodeExporter176" class="card bg-white p-8 rounded-xl shadow-lg border">
+                    <h4 class="text-2xl font-bold mb-4">Free</h4>
+                    <div data-filename="pages/CodeExporter" data-linenumber="178" data-visual-selector-id="pages/CodeExporter178" class="text-4xl font-bold mb-6">$0<span data-filename='pages/CodeExporter' data-linenumber='178' data-visual-selector-id='pages/CodeExporter178' class="text-lg text-gray-500">/month</span></div>
+                    <ul data-filename="pages/CodeExporter" data-linenumber="179" data-visual-selector-id="pages/CodeExporter179" class="space-y-3 mb-8">
+                        <li data-filename="pages/CodeExporter" data-linenumber="180" data-visual-selector-id="pages/CodeExporter180" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='180' data-visual-selector-id='pages/CodeExporter180' class="text-green-500 mr-2">✓</span> 10 flashcard sets</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="181" data-visual-selector-id="pages/CodeExporter181" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='181' data-visual-selector-id='pages/CodeExporter181' class="text-green-500 mr-2">✓</span> Basic AI generation</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="182" data-visual-selector-id="pages/CodeExporter182" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='182' data-visual-selector-id='pages/CodeExporter182' class="text-green-500 mr-2">✓</span> Study mode</li>
+                    </ul>
+                    <button data-filename="pages/CodeExporter" data-linenumber="184" data-visual-selector-id="pages/CodeExporter184" class="w-full border-2 border-gray-300 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="188" data-visual-selector-id="pages/CodeExporter188" class="card bg-white p-8 rounded-xl shadow-lg border-2 border-purple-500 relative">
+                    <div data-filename="pages/CodeExporter" data-linenumber="189" data-visual-selector-id="pages/CodeExporter189" class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Popular
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Pro</h4>
+                    <div data-filename="pages/CodeExporter" data-linenumber="193" data-visual-selector-id="pages/CodeExporter193" class="text-4xl font-bold mb-6">$9<span data-filename='pages/CodeExporter' data-linenumber='193' data-visual-selector-id='pages/CodeExporter193' class="text-lg text-gray-500">/month</span></div>
+                    <ul data-filename="pages/CodeExporter" data-linenumber="194" data-visual-selector-id="pages/CodeExporter194" class="space-y-3 mb-8">
+                        <li data-filename="pages/CodeExporter" data-linenumber="195" data-visual-selector-id="pages/CodeExporter195" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='195' data-visual-selector-id='pages/CodeExporter195' class="text-green-500 mr-2">✓</span> Unlimited flashcard sets</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="196" data-visual-selector-id="pages/CodeExporter196" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='196' data-visual-selector-id='pages/CodeExporter196' class="text-green-500 mr-2">✓</span> Advanced AI generation</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="197" data-visual-selector-id="pages/CodeExporter197" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='197' data-visual-selector-id='pages/CodeExporter197' class="text-green-500 mr-2">✓</span> Visual flashcards</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="198" data-visual-selector-id="pages/CodeExporter198" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='198' data-visual-selector-id='pages/CodeExporter198' class="text-green-500 mr-2">✓</span> Export to books</li>
+                    </ul>
+                    <button data-filename="pages/CodeExporter" data-linenumber="200" data-visual-selector-id="pages/CodeExporter200" class="w-full gold-gradient text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                        Start Pro Trial
+                    </button>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="204" data-visual-selector-id="pages/CodeExporter204" class="card bg-white p-8 rounded-xl shadow-lg border">
+                    <h4 class="text-2xl font-bold mb-4">Enterprise</h4>
+                    <div data-filename="pages/CodeExporter" data-linenumber="206" data-visual-selector-id="pages/CodeExporter206" class="text-4xl font-bold mb-6">$29<span data-filename='pages/CodeExporter' data-linenumber='206' data-visual-selector-id='pages/CodeExporter206' class="text-lg text-gray-500">/month</span></div>
+                    <ul data-filename="pages/CodeExporter" data-linenumber="207" data-visual-selector-id="pages/CodeExporter207" class="space-y-3 mb-8">
+                        <li data-filename="pages/CodeExporter" data-linenumber="208" data-visual-selector-id="pages/CodeExporter208" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='208' data-visual-selector-id='pages/CodeExporter208' class="text-green-500 mr-2">✓</span> Everything in Pro</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="209" data-visual-selector-id="pages/CodeExporter209" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='209' data-visual-selector-id='pages/CodeExporter209' class="text-green-500 mr-2">✓</span> Team collaboration</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="210" data-visual-selector-id="pages/CodeExporter210" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='210' data-visual-selector-id='pages/CodeExporter210' class="text-green-500 mr-2">✓</span> Custom branding</li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="211" data-visual-selector-id="pages/CodeExporter211" class="flex items-center"><span data-filename='pages/CodeExporter' data-linenumber='211' data-visual-selector-id='pages/CodeExporter211' class="text-green-500 mr-2">✓</span> Priority support</li>
+                    </ul>
+                    <button data-filename="pages/CodeExporter" data-linenumber="213" data-visual-selector-id="pages/CodeExporter213" class="w-full border-2 border-purple-500 text-purple-500 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section data-filename="pages/CodeExporter" data-linenumber="222" data-visual-selector-id="pages/CodeExporter222" class="gold-gradient text-white section">
+        <div data-filename="pages/CodeExporter" data-linenumber="223" data-visual-selector-id="pages/CodeExporter223" class="container text-center">
+            <h3 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Learning?</h3>
+            <p data-filename="pages/CodeExporter" data-linenumber="225" data-visual-selector-id="pages/CodeExporter225" class="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+                Join thousands of students and educators who are already using FlashGenius to accelerate their learning.
+            </p>
+            <div data-filename="pages/CodeExporter" data-linenumber="228" data-visual-selector-id="pages/CodeExporter228" class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button data-filename="pages/CodeExporter" data-linenumber="229" data-visual-selector-id="pages/CodeExporter229" class="bg-white text-orange-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                    Start Creating Now
+                </button>
+                <button data-filename="pages/CodeExporter" data-linenumber="232" data-visual-selector-id="pages/CodeExporter232" class="border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
+                    Book a Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer data-filename="pages/CodeExporter" data-linenumber="240" data-visual-selector-id="pages/CodeExporter240" id="contact" class="bg-gray-900 text-white section">
+        <div data-filename="pages/CodeExporter" data-linenumber="241" data-visual-selector-id="pages/CodeExporter241" class="container">
+            <div data-filename="pages/CodeExporter" data-linenumber="242" data-visual-selector-id="pages/CodeExporter242" class="grid md:grid-cols-4 gap-8">
+                <div data-filename="pages/CodeExporter" data-linenumber="243" data-visual-selector-id="pages/CodeExporter243">
+                    <div data-filename="pages/CodeExporter" data-linenumber="244" data-visual-selector-id="pages/CodeExporter244" class="flex items-center space-x-3 mb-4">
+                        <div data-filename="pages/CodeExporter" data-linenumber="245" data-visual-selector-id="pages/CodeExporter245" class="w-10 h-10 gold-gradient rounded-xl flex items-center justify-center">
+                            <span data-filename="pages/CodeExporter" data-linenumber="246" data-visual-selector-id="pages/CodeExporter246" class="text-white font-bold text-lg">F</span>
+                        </div>
+                        <h1 class="text-2xl font-bold">FlashGenius</h1>
+                    </div>
+                    <p data-filename="pages/CodeExporter" data-linenumber="250" data-visual-selector-id="pages/CodeExporter250" class="text-gray-400">AI-powered study cards for the modern learner.</p>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="252" data-visual-selector-id="pages/CodeExporter252">
+                    <h5 class="font-semibold mb-4">Product</h5>
+                    <ul data-filename="pages/CodeExporter" data-linenumber="254" data-visual-selector-id="pages/CodeExporter254" class="space-y-2 text-gray-400">
+                        <li data-filename="pages/CodeExporter" data-linenumber="255" data-visual-selector-id="pages/CodeExporter255"><a data-filename="pages/CodeExporter" data-linenumber="255" data-visual-selector-id="pages/CodeExporter255" href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="256" data-visual-selector-id="pages/CodeExporter256"><a data-filename="pages/CodeExporter" data-linenumber="256" data-visual-selector-id="pages/CodeExporter256" href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="257" data-visual-selector-id="pages/CodeExporter257"><a data-filename="pages/CodeExporter" data-linenumber="257" data-visual-selector-id="pages/CodeExporter257" href="#" class="hover:text-white transition-colors">Templates</a></li>
+                    </ul>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="260" data-visual-selector-id="pages/CodeExporter260">
+                    <h5 class="font-semibold mb-4">Company</h5>
+                    <ul data-filename="pages/CodeExporter" data-linenumber="262" data-visual-selector-id="pages/CodeExporter262" class="space-y-2 text-gray-400">
+                        <li data-filename="pages/CodeExporter" data-linenumber="263" data-visual-selector-id="pages/CodeExporter263"><a data-filename="pages/CodeExporter" data-linenumber="263" data-visual-selector-id="pages/CodeExporter263" href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="264" data-visual-selector-id="pages/CodeExporter264"><a data-filename="pages/CodeExporter" data-linenumber="264" data-visual-selector-id="pages/CodeExporter264" href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="265" data-visual-selector-id="pages/CodeExporter265"><a data-filename="pages/CodeExporter" data-linenumber="265" data-visual-selector-id="pages/CodeExporter265" href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                <div data-filename="pages/CodeExporter" data-linenumber="268" data-visual-selector-id="pages/CodeExporter268">
+                    <h5 class="font-semibold mb-4">Support</h5>
+                    <ul data-filename="pages/CodeExporter" data-linenumber="270" data-visual-selector-id="pages/CodeExporter270" class="space-y-2 text-gray-400">
+                        <li data-filename="pages/CodeExporter" data-linenumber="271" data-visual-selector-id="pages/CodeExporter271"><a data-filename="pages/CodeExporter" data-linenumber="271" data-visual-selector-id="pages/CodeExporter271" href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="272" data-visual-selector-id="pages/CodeExporter272"><a data-filename="pages/CodeExporter" data-linenumber="272" data-visual-selector-id="pages/CodeExporter272" href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li data-filename="pages/CodeExporter" data-linenumber="273" data-visual-selector-id="pages/CodeExporter273"><a data-filename="pages/CodeExporter" data-linenumber="273" data-visual-selector-id="pages/CodeExporter273" href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-filename="pages/CodeExporter" data-linenumber="277" data-visual-selector-id="pages/CodeExporter277" class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p data-filename="pages/CodeExporter" data-linenumber="278" data-visual-selector-id="pages/CodeExporter278">&copy; 2024 FlashGenius. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-filename="pages/CodeExporter" data-linenumber="283" data-visual-selector-id="pages/CodeExporter283">
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
